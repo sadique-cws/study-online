@@ -6,9 +6,9 @@ const Side = async () => {
   let topics = await callingTopics.json();
   return (
     <div className='flex flex-col'>
-        <Link href='' className='bg-slate-200 text-black font-semibold font-sans text-xl p-4 hover:bg-slate-400'>Topics</Link>
+        <Link href="" className='bg-slate-200 text-black font-semibold font-sans text-xl p-4 hover:bg-slate-400'>Topics</Link>
         {
-          topics.data.map((value, key) => (<Link href='' key={key} className='bg-slate-200 text-black font-sans text-lg px-4 py-2 hover:bg-slate-400'>{value.topic_title}</Link>))
+          topics.data.map((value, key) => (<Link href={`/content/${value._id}`} key={key} className='bg-slate-200 text-black font-sans text-lg px-4 py-2 hover:bg-slate-400'>{value.topic_title}</Link>))
         }
         
 
