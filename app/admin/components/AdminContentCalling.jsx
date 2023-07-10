@@ -34,6 +34,9 @@ const AdminContentCalling = ({contents}) => {
                 Author
             </th>
             <th scope="col" className="px-6 py-3">
+                topic
+            </th>
+            <th scope="col" className="px-6 py-3">
                 Views
             </th>
             <th scope="col" className="px-6 py-3">
@@ -58,7 +61,10 @@ const AdminContentCalling = ({contents}) => {
                 {value.content_text}
             </td>
             <td className="px-6 py-4">
-                {value.author}
+                {value.author.name} 
+            </td>
+            <td className="px-6 py-4">
+                {value.topic_id.topic_title}
             </td>
             <td className="px-6 py-4">
                 {value.views}

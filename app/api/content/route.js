@@ -7,7 +7,7 @@ export const GET = async () => {
     await Connect();
     let data;
     try{
-        data =  await Content.find({});
+        data =  await Content.find({}).populate('author').populate("topic_id");
         return NextResponse.json({data});
     }
     catch(e){

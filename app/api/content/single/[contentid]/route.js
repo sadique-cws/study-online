@@ -20,10 +20,10 @@ export const GET = async (req, {params}) => {
     await Connect();
     let data;
     try{
-        data = await Content.findById(params.contentid);
-        return NextResponse.json({data})
+        data = await Content.findById(params.contentid).populate("author").populate("topic_id");
+        return NextResponse.json({data}) 
     }
     catch(e){
-        return NextResponse.json({"msg":"something went wrong"});
+        return NextResponse.json({"msg":e.message});
     }
 }

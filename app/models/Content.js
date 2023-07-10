@@ -1,4 +1,7 @@
 import mongoose from "mongoose"
+import user from './User';
+import topic from './Topic';
+
 
 const ContentSchema = new mongoose.Schema({
     topic_id:{type:mongoose.Schema.Types.ObjectId,ref:"topic"},
