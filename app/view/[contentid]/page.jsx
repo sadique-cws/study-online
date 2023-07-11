@@ -4,7 +4,7 @@ import React from 'react'
 const viewpage = async({params}) => {
     let callingOneContent = await fetch(`http://127.0.0.1:3000/api/content/single/${params.contentid}`,{cache:"no-store"})
     callingOneContent = await callingOneContent.json()
-
+ 
   return (
     <div className='flex flex-1 flex-col gap-3'>
         <h1 className='text-4xl font-black'>{callingOneContent.data.content_title}</h1> 
